@@ -29,13 +29,21 @@
 
     <form class="form-inline" method="get" role="form">
       <div class="form-group">
-        <input type="text" placeholder="Brunch" class="form-control">
+        <input type="text" name="query" placeholder="Brunch" class="form-control">
       </div>
       <button type="submit" class="btn btn-success">Search</button>
     </form>
 
-    <h1>Hello, world!</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+    <h1>Whoa!</h1>
+
+    <% if @counts %>
+      <ul>
+        <% @counts.each do |c| %>
+          <li>
+            <%= c %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
   </div>
 </div>
